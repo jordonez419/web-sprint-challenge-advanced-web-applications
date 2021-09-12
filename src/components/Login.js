@@ -13,6 +13,7 @@ const Login = () => {
   const history = useHistory();
 
   const [formData, setFormData] = useState(intialFormState)
+  const [error, setError] = useState('')
 
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
@@ -23,7 +24,7 @@ const Login = () => {
       [e.target.name]: e.target.value
     })
   }
-  const error = useState("");
+
   //replace with error state
 
   const signIn = (e) => {
@@ -38,7 +39,7 @@ const Login = () => {
         history.push('/bubbles');
       })
       .catch(err => {
-        console.log(err);
+        setError('Wrong username of password')
       })
     setFormData({
       username: '',

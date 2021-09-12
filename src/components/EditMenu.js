@@ -47,7 +47,7 @@ const EditMenu = (props) => {
 
     <div className="button-row">
       <button type="submit" id="submit" data-testid="submit_button">save</button>
-      <button data-testid="cancel_button" onClick={handleCancel}>cancel</button>
+      <button data-testid="/color/i" onClick={handleCancel}>cancel</button>
     </div>
   </form>);
 }
