@@ -22,11 +22,11 @@ function App() {
           Color Picker Sprint Challenge
           <a data-testid="logoutButton" href="#" onClick={() => logOut()}>logout</a>
         </header>
-        <Route path='/login'>
-          <Login />
-        </Route>
         <Route path='/bubbles'>
           <PrivateRoute component={BubblePage} />
+        </Route>
+        <Route path='/'>
+          <Login />
         </Route>
 
       </div>

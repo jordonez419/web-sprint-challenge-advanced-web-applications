@@ -39,7 +39,7 @@ const Login = () => {
         history.push('/bubbles');
       })
       .catch(err => {
-        setError('Wrong username of password')
+        setError('Wrong username or password')
       })
     setFormData({
       username: '',
@@ -53,12 +53,12 @@ const Login = () => {
       <div data-testid="loginForm" className="login-form">
         <form>
           <label htmlFor="username">
-            <input type="text" placeholder='Enter Username' value={formData.username} onChange={handleChanges} name='username' id='username' />
+            <input type="text" placeholder='Enter Username' value={formData.username} onChange={handleChanges} name='username' id="username" />
           </label>
           <label htmlFor="password">
-            <input type="password" placeholder='Enter Password' value={formData.password} onChange={handleChanges} name='password' id='password' />
+            <input type="password" placeholder='Enter Password' value={formData.password} onChange={handleChanges} name='password' id="password" />
           </label>
-          <button onClick={signIn} id='submit'> Sign in</button>
+          <button onClick={signIn} id="submit"> Sign in</button>
         </form>
       </div>
 
